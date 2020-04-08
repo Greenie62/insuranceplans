@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Waiver Form</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="familymembers"></div>
+        <div class="card-header">
+            <h1>ACCIDENTAL HOSPITALIZATION</h1>
+            <div class="button-row">
+                <button class="add-spouse">Add Spouse</button>
+                <button class="add-child">Add Child</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="flex-row">
+                <h3>ER/URGENT CARE VISIT</h3>
+                <div class='planone'>
+                    <h2>Plan One:</h2>
+                <div class='form'>
+                    <label for="erCare"></label>
+                    <input type='text' name='erCare' autocomplete="off" id='erCare'/>
+                </div>
+                </div>
+
+            <div class='plantwo'>
+                    <h2>Plan Two:</h2>
+                <div class='form'>
+                    <label for="erCare"></label>
+                    <input type='text' name='erCare' autocomplete="off" id='erCaretwo'/>
+                </div>
+
+            </div>
+            </div>
+            <div class="flex-row">
+                <h3>OVERNIGHT CONFINEMENT</h3>
+                <div class='planone'>
+                <div class='form'>
+                        <label for="overnight">$</label>
+                        <input type='text' name='overnight' autocomplete="off" id='overnight'/>
+                        <br/>
+                        <label style="font-size:25px"; for="annual">Annual:$</label>
+                        <input type='text' name='annual' autocomplete="off" id='annual'/>
+                </div>
+                </div>
+
+                <div class='plantwo'>
+                        <div class='form'>
+                                <label for="overnight">$</label>
+                                <input type='text' name='overnight' autocomplete="off" id='overnighttwo'/>
+                                <br/>
+                                <label style="font-size:25px"; for="annual">Annual:$</label>
+                                <input type='text' name='annual' autocomplete="off" id='annualtwo'/>
+                        </div>
+
+                </div>
+            </div>
+            <div class="flex-row">
+                <h3>INTENSIVE CARE VISIT</h3>
+                <div class='form planone'>
+                        <label for="intensive">$</label>
+                        <input type='text' name='intensive' autocomplete="off" id='intensive'/>
+                </div>
+                <div class='form plantwo'>
+                        <label for="intensive">$</label>
+                        <input type='text' name='intensive' autocomplete="off" id='intensivetwo'/>
+                </div>
+            </div>
+            <div class="flex-row">
+                <h3>DISABILITY PAY DUE TO ACCIDENT</h3>
+                <div class='form planone'>
+                        <label for="disability">$</label>
+                        <input type='text' name='disability' value="$400 a month" autocomplete="off" id='disability'/>
+                </div>
+
+                <div class='form plantwo'>
+                        <label for="disability">$</label>
+                        <input type='text' name='disability' value="$400 a month" autocomplete="off" id='disabilitytwo'/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1>ACCIDENTAL DEATH BENEFIT</h1>
+        </div>
+        <div class='card-body'>
+        <div class="flex-row">
+            <h3>ANY ACCIDENT</h3>
+            <div class='form planone'>
+                    <label for="anyacc">$</label>
+                    <input type='text' name='anyacc' autocomplete="off" id='anyacc'/>
+            </div>
+
+            <div class='form plantwo'>
+                    <label for="anyacc">$</label>
+                    <input type='text' name='anyacc' autocomplete="off" id='anyacctwo'/>
+            </div>
+        </div>
+        <div class="flex-row">
+            <h3>AUTO ACCIDENT</h3>
+            <div class='form planone'>
+                    <label for="autoacc">$</label>
+                    <input type='text' name='autoacc' autocomplete="off" id='autoacc'/>
+            </div>
+            <div class='form plantwo'>
+                    <label for="autoacc">$</label>
+                    <input type='text' name='autoacc' autocomplete="off" id='autoacctwo'/>
+            </div>
+        </div>
+        <div class="flex-row">
+            <h3>COMMON CARRIER</h3>
+            <div class='form planone'>
+                    <label for="common">$</label>
+                    <input type='text' name='common' autocomplete="off" id='common'/>
+            </div>
+            <div class='form plantwo'>
+                    <label for="common">$</label>
+                    <input type='text' name='common' autocomplete="off" id='commontwo'/>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h1>HEALTH RELATED/NATURAL CAUSE BENEFIT</h1>
+        </div>
+        <div class='card-body'>
+            <div class="flex-row">
+                <div>
+                <h3>ADDITIONAL COVERAGE</h3>
+                        <h4>-Cancer Plan</h4>
+                        <h4>-Critical Illness</h4>
+                </div>
+                <div class='form planone'>
+                        <label for="additional">$</label>
+                        <input type='text' name='additional' value="$100,000" autocomplete="off" id='additional'/>
+                </div>
+                <div class='form plantwo'>
+                        <label for="additional">$</label>
+                        <input type='text' name='additional' value="$100,000" autocomplete="off" id='additional'/>
+                </div>
+            </div>
+            <div class="flex-row">
+             <div>  <h3 class='childrenh3'>CHILDREN COVERAGE</h3></div>
+                <div class='form planone'>
+                        <label for="children">$</label>
+                        <input type='text' name='children' value="$10,000" autocomplete="off" id='children'/>
+                </div>
+                <div class='form plantwo'>
+                        <label for="children">$</label>
+                        <input type='text' name='children' value="$10,000" autocomplete="off" id='children'/>
+                </div>
+            </div>
+            <div class="flex-row">
+                    <div> 
+                <h3 class='spouseh3'>SPOUSE COVERAGE</h3>
+                </div>
+                <div class='form planone'>
+                        <label for="spouse">$</label>
+                        <input type='text' name='spouse' value="$10,000" autocomplete="off" id='spouse'/>
+                </div>
+                <div class='form plantwo'>
+                        <label for="spouse">$</label>
+                        <input type='text' name='spouse' value="$10,000" autocomplete="off" id='spouse'/>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div>
+                <h3>WHOLE LIFE</h3>
+                <h4>-Inc. Disability/Layoff</h4>
+                <h4>Waiver Premiums</h4>
+                </div>
+                <div class='form planone' style="flex-direction:column">
+                    <div>
+                        <label for="day">$</label>
+                        <input class='forminput' type='text' name='day' autocomplete="off" id='day'/>
+                    </div>   
+                        <br/>
+                    <div>
+                        <label for="month">$</label>
+                        <input class='forminput' type='text' name='month' autocomplete="off" id='month'/>
+                    </div>    
+                        <br/>
+                    <div>
+                        <label for="wholelife">$</label>
+                        <input class='forminput' type='text' name='wholelife' autocomplete="off" id='wholelife'/>
+                    </div>
+                    </div>
+                    
+                <div class='form plantwo' style="flex-direction:column">
+                        <div>
+                                <label for="day">$</label>
+                                <input class='forminput' type='text' name='day' autocomplete="off" id='dayplantwo'/>
+                            </div>   
+                                <br/>
+                            <div>
+                                <label for="month">$</label>
+                                <input class='forminput' type='text' name='month' autocomplete="off" id='monthplantwo'/>
+                            </div>    
+                                <br/>
+                            <div>
+                                <label for="wholelife">$</label>
+                                <input class='forminput' type='text' name='wholelife' autocomplete="off" id='wholelifeplantwo'/>
+                            </div>
+                </div>
+               
+            </div>
+          
+        </div>
+    </div>
+    <div class='inputbox-row'>
+    <div class='inputbox'>
+            <div>
+                    <label for="day">$</label>
+                    <input class='dayinput' type='text' name='day' autocomplete="off" id='day'/>
+                </div>   
+                    <br/>
+                <div>
+                    <label for="month">$</label>
+                    <input class='monthinput' type='text' name='month' autocomplete="off" id='month'/>
+                </div> 
+    </div>
+    <div class='inputbox'>
+            <div>
+                    <label for="day">$</label>
+                    <input class='dayinputtwo' type='text' name='day' autocomplete="off" id='day'/>
+                </div>   
+                    <br/>
+                <div>
+                    <label for="month">$</label>
+                    <input class='monthinputtwo' type='text' name='month' autocomplete="off" id='month'/>
+                </div> 
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position:relative;
+}
+
+.familymembers{
+  
+    margin:0 auto;
+    padding:.5em;
+}
+
+
+.card-header{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding:.5em;
+    height:20%;
+}
+
+.card-header > h1{
+    text-decoration:underline;
+    font-size:40px;
+    letter-spacing:5px;
+}
+
+.card-body{
+    height:80%;
+}
+
+.flex-row{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:.5em;
+    margin:5px;
+    height:30%;
+}
+
+.form > input, .forminput{
+    width:225px;
+    height:30px;
+    font-size:25px;
+}
+
+.addBadge{
+    width:15px;
+    height:15px;
+    background:red;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+body{
+    height:100vh;
+    background:linear-gradient(to right,lightgray,rgb(197, 181, 181))
+}
+
+
+.planone, .plantwo{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+   
+}
+
+.button-row{
+    display:flex;
+}
+
+.add-spouse, .add-child{
+    width:75px;
+    height:40px;
+    background:yellow;
+    font-size:16px;
+    cursor:pointer;
+    transition:1s ease;
+   
+}
+
+.add-spouse:hover{
+    opacity:.7
+}
+
+.add-child:hover{
+    opacity:.7
+}
+
+.add-child{
+    background:green;
+}
+
+.inputbox-row{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+
+.inputbox{
+    height:100px;
+    width:200px;
+    background:green;
+    outline:1px solid black;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.inputbox > input{
+    height:20px;
+}
+
