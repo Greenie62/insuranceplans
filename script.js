@@ -1,3 +1,14 @@
+
+window.addEventListener('DOMContentLoaded',()=>{
+var client=prompt("Client name?")
+
+var h1=document.createElement("h1")
+h1.appendChild(document.createTextNode("A plan for: " + client))
+document.querySelector("#client").appendChild(h1)
+
+})
+
+
 var overNightInput=document.querySelector("#overnight");
 var erCareField=document.querySelector("#erCare")
 var intensiveField=document.querySelector("#intensive")
@@ -75,7 +86,11 @@ function addName(idx){
     var birthday=prompt("Birthday?")
   
         var li=document.createElement("li");
-        li.appendChild(document.createTextNode(name))
+      
+     
+        li.appendChild(document.createTextNode('Coverage towards: ' + name))
+        
+    
         li.style.listStyle='none'
         var h3=document.createElement("h3")
         h3.appendChild(document.createTextNode("Name: " + name + " Born: " + birthday))
@@ -91,7 +106,7 @@ function addName(idx){
             document.querySelector(".spouseh3").appendChild(li)
         }
 
-        document.querySelector(".familymembers").appendChild(h3)
+        document.querySelector(".members").appendChild(h3)
 }
 
 
@@ -122,12 +137,13 @@ function lifePay(value){
 //plan2 logic
 
 var dayInput=document.querySelector(".dayinput");
-var monthField=document.querySelector(".monthinput")
+var monthInput=document.querySelector(".monthinput")
 
 var dayInputTwo=document.querySelector(".dayinputtwo");
-var monthFieldTwo=document.querySelector(".monthinputtwo")
+var monthInputTwo=document.querySelector(".monthinputtwo")
 
-dayInput.oninput=(e)=>{
+monthInputTwo.oninput=(e)=>{
+ 
     console.log(e.target.value)
     if(!isNaN(e.target.value)){
         planTwo(+e.target.value)
@@ -135,20 +151,23 @@ dayInput.oninput=(e)=>{
 }
 
 
-dayInputTwo.oninput=(e)=>{
+monthInput.oninput=(e)=>{
+   
     console.log(e.target.value)
     if(!isNaN(e.target.value)){
-        var month=(+e.target.value)*30;
+        var day=(+e.target.value)/30;
 
-        monthFieldTwo.value=month;
+        dayInput.value=`${day.toFixed(2)} dollar a day`;
     }
 }
 
 
 function planTwo(num){
-    var month=num*30;
+ 
+    
+    var day=num/30;
 
-    monthField.value=month;
+    dayInputTwo.value=`${day.toFixed(2)} dollar a day`;
 }
 
 

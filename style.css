@@ -7,9 +7,10 @@
 }
 
 .familymembers{
-  
     margin:0 auto;
     padding:.5em;
+    width:50%;
+
 }
 
 
@@ -117,7 +118,11 @@ body{
     justify-content: center;
 }
 
-.inputbox > input{
-    height:20px;
+.greeninput{
+    height:30px;
+    font-size:20px;
+    width:175px;
 }
+
+
 
