@@ -125,4 +125,73 @@ body{
 }
 
 
+.addspousemodal, .addchildmodal{
+    width:50%;
+    height:225px;
+    margin:0 auto;
+    /* background:linear-gradient(to right,rgb(173, 157, 157),rgb(165, 148, 148)); */
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+    top:-1000px;
+    left:800px;
+    transition:1s;
+    outline:1px solid black;
+    padding:1em;
+    font-size:18px;
+    background:pink;
+}
+
+.addchildmodal{
+    background:green;
+}
+
+.addchildmodal{
+    top:-1200px;
+}
+
+
+.enterSpouseBtn, .enterChildBtn{
+    width:80px;
+    height:20px;
+    font-size:15px;
+    letter-spacing:5px;
+}
+
+.showspousemodal, .showchildmodal{
+    left:100px;
+}
+
+.showchildmodal{
+    top:-1200px;
+}
+
+.bdayflex{
+    flex-direction:column;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.enterMemberBtn{
+    background:green;
+    width:70px;
+    height:20px;
+}
+
+
+#name, #year, #monthselect, #dayselect{
+    width:150px;
+    height:20px;
+    font-size:17px;
+}
+
+#monthselect, #year, #dayselect{
+  
+    width:80px;
+}
+
+
 

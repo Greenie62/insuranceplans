@@ -1,12 +1,28 @@
 
 window.addEventListener('DOMContentLoaded',()=>{
 var client=prompt("Client name?")
+var bday=prompt("Birthday?")
 
 var h1=document.createElement("h1")
-h1.appendChild(document.createTextNode("A plan for: " + client))
+h1.appendChild(document.createTextNode("A plan for: " + client + " " +  bday))
 document.querySelector("#client").appendChild(h1)
 
 })
+
+//edit top-name/bday code
+
+
+document.querySelector("#client").onclick=()=>{
+    var client=prompt("Client name?")
+    var bday=prompt("Birthday?")
+
+var h1=document.createElement("h1")
+document.querySelector("#client").innerHTML=""
+h1.appendChild(document.createTextNode("A plan for: " + client + " " + bday))
+document.querySelector("#client").appendChild(h1)
+}
+
+/* end edit */
 
 
 var overNightInput=document.querySelector("#overnight");
@@ -72,42 +88,16 @@ function accidentMath(num){
 
 
 
-var addChildBtn=document.querySelector(".add-child");
-var addSpouseBtn=document.querySelector(".add-spouse");
-var btns=[addChildBtn,addSpouseBtn]
-
-btns.forEach((btn,idx)=>{
-    btn.onclick=()=>addName(idx)
-})
 
 
-function addName(idx){
-    var name=prompt("Name?")
-    var birthday=prompt("Birthday?")
-  
-        var li=document.createElement("li");
-      
-     
-        li.appendChild(document.createTextNode('Coverage towards: ' + name))
-        
-    
-        li.style.listStyle='none'
-        var h3=document.createElement("h3")
-        h3.appendChild(document.createTextNode("Name: " + name + " Born: " + birthday))
 
-    
-    
-        if(idx === 0){
-            li.style.color='blue'
-            document.querySelector(".childrenh3").appendChild(li)
-        }
-        else{
-            li.style.color='red'
-            document.querySelector(".spouseh3").appendChild(li)
-        }
+/* new code */
 
-        document.querySelector(".members").appendChild(h3)
-}
+
+/* end new */
+
+
+
 
 
 var dayInput=document.querySelector("#day");
@@ -214,3 +204,202 @@ function outputValTwo(num){
     commonFieldTwo.value=tripleAcc;
     annualFieldTwo.value=annual
 }
+
+
+
+/* New Code */
+
+
+//add Member Btns
+var addChildBtn=document.querySelector(".add-child");
+var addSpouseBtn=document.querySelector(".add-spouse");
+var enterChildBtn=document.querySelector(".enterChildBtn")
+var enterSpouseBtn=document.querySelector(".enterSpouseBtn")
+var addSpouseModal=document.querySelector(".addspousemodal")
+var addChildModal=document.querySelector(".addchildmodal")
+
+
+//populate inputs
+var months=['January','February','March','April','May','June','July','August','September','October','November','December']
+
+
+var yearHtml=""
+for(let i=1920;i<2010;i++){
+        yearHtml += `<option value=${i}>${i}</option>`
+}
+
+
+var monthHtml=""
+
+months.forEach(m=>{
+    monthHtml += `<option value=${m}>${m}</option>`
+})
+
+var dayHtml=""
+
+for(let i=1;i<32;i++){
+    dayHtml+= `<option value=${i}>${i}</option>`
+}
+
+console.log(monthHtml)
+console.log(dayHtml)
+
+
+document.querySelector("#monthselect").innerHTML=monthHtml
+document.querySelector("#year").innerHTML=yearHtml
+document.querySelector("#dayselect").innerHTML=dayHtml
+
+document.querySelector("#childmonthselect").innerHTML=monthHtml
+document.querySelector("#childyear").innerHTML=yearHtml
+document.querySelector("#childdayselect").innerHTML=dayHtml
+
+
+
+
+
+
+
+//enterMemberBtn.onclick=addMember
+
+
+addChildBtn.onclick=()=>{
+    addChildModal.classList.toggle("showchildmodal")
+}
+
+addSpouseBtn.onclick=()=>{
+    addSpouseModal.classList.toggle("showspousemodal")
+}
+
+// function addChild(){
+//     addMemberModal.classList.toggle('showspousemodal')
+
+//     var li=document.createElement("li");
+//     var name=document.querySelector("#name").value
+//     var month=document.querySelector("#monthselect").value;
+//     var day=document.querySelector("#dayselect").value;
+//     var year=document.querySelector("#year").value;
+//     var bday=month + " " + day + " " + year
+      
+     
+//         li.appendChild(document.createTextNode('Coverage towards: ' + name))
+        
+    
+//         li.style.listStyle='none'
+//         var h3=document.createElement("h3")
+//         h3.appendChild(document.createTextNode("Name: " + name + " Born: " + bday))
+
+    
+    
+       
+//             li.style.color='green'
+//             document.querySelector(".childrenh3").appendChild(li)
+        
+      
+
+//         document.querySelector(".members").appendChild(h3)
+//         addMemberModal.classList.toggle('showmodal')
+// }
+
+
+
+
+
+
+
+//enter spouse
+
+enterSpouseBtn.onclick=()=>{
+    var li=document.createElement("li");
+    var name=document.querySelector("#name").value
+    var month=document.querySelector("#monthselect").value;
+    var day=document.querySelector("#dayselect").value;
+    var year=document.querySelector("#year").value;
+
+    var bday=month + " " + day + " " + year
+      
+     
+        li.appendChild(document.createTextNode('Coverage towards: ' + name))
+        
+    
+        li.style.listStyle='none'
+        var h3=document.createElement("h3")
+        h3.appendChild(document.createTextNode("Name: " + name + " Born: " + bday))
+
+    
+    
+      
+            li.style.color='green'
+            document.querySelector(".spouseh3").appendChild(li)
+        
+
+        document.querySelector(".members").appendChild(h3)
+
+        addSpouseModal.classList.toggle("showspousemodal")
+        name.innerHTML=""
+}
+
+
+
+
+//enter child
+enterChildBtn.onclick=()=>{
+    var li=document.createElement("li");
+    li.className='kid-li'
+    var name=document.querySelector("#childname").value
+    var month=document.querySelector("#childmonthselect").value;
+    var day=document.querySelector("#childdayselect").value;
+    var year=document.querySelector("#childyear").value;
+    var bday=month + " " + day + " " + year
+      
+     
+        li.appendChild(document.createTextNode('Coverage towards: ' + name))
+        
+    
+        li.style.listStyle='none'
+        var h3=document.createElement("h3")
+        h3.appendChild(document.createTextNode("Name: " + name + " Born: " + bday))
+
+    
+    
+       
+            li.style.color='green'
+            document.querySelector(".childrenh3").appendChild(li)
+        
+       document.querySelector(".members").appendChild(h3)
+
+       addChildModal.classList.toggle('showchildmodal')
+
+       name.value=""
+
+
+     
+    
+}
+
+
+//changes uptop
+
+document.querySelectorAll('.members').forEach(m=>{
+    m.onclick=(e)=>{
+        console.log('fx fired!')
+        var change=prompt('Name?');
+        var birth=prompt("Birthday?")
+        e.target.innerHTML=`Name:${change} Birthdy:${birth}`
+
+
+  
+    }
+})
+
+
+document.querySelectorAll(".childrenh3").forEach(li=>{
+    li.onclick=(e)=>{
+        console.log("hey!!")
+        var change=prompt("Change to?")
+        e.target.innerHTML=""
+        e.target.innerHTML = 'Coverage towards: ' + change
+    }
+})
+
+
+
